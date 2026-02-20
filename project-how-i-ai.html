@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How I AI | Prabodh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@400;500;700&family=Sora:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/favicon-light.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="assets/favicon-dark.png" media="(prefers-color-scheme: dark)">
+</head>
+
+<body class="bg-[#020202] text-white overflow-x-hidden custom-cursor-active">
+
+    <div class="stage-container">
+        <div class="grid-floor"></div>
+        <div class="horizon-glow"></div>
+    </div>
+
+    <div class="noise"></div>
+    <canvas id="chromatic-canvas"></canvas>
+
+    <!-- HEADER -->
+    <!-- HEADER -->
+    <app-navbar></app-navbar>
+
+    <!-- MAIN CONTAINER -->
+    <main class="w-full relative z-10 flex flex-col items-center pt-32 pb-32">
+
+        <!-- TITLE & INTRO -->
+        <div class="w-full max-w-[840px] px-6 flex flex-col gap-14 mb-20 pt-[80px]">
+            <div class="flex flex-col gap-6 relative">
+                <div class="relative w-fit">
+                    <h1 class="text-white text-3xl md:text-5xl font-medium font-['Inter'] leading-tight">How I use AI in
+                        my
+                        design work?</h1>
+
+                </div>
+
+                <!-- Mobile only vibe code inline -->
+                <div class="flex lg:hidden items-center gap-2 text-[#0EA655] opacity-90 pb-2">
+                    <span class="font-['Caveat'] text-[18px]">This website has been vibe coded as well 🥰</span>
+                </div>
+                <div class="flex flex-col gap-4 text-white/[0.72] text-lg font-normal font-['Inter'] leading-relaxed">
+                    <p>
+                        Over the past year, I’ve been experimenting with AI and incorporating them in my day to day
+                        work, as well as influencing the design ops. It has helped me become more efficient, creative
+                        and at the same time helped satisfy my curiosity to learn various topics.
+                    </p>
+                </div>
+            </div>
+
+            <!-- AREAS PILLS -->
+            <div class="flex flex-col gap-4">
+                <p class="text-lg text-gray-300">I leverage AI in these areas</p>
+                <div class="flex flex-wrap gap-4">
+                    <div class="px-6 py-4 bg-white/10 rounded-lg backdrop-blur-sm border border-white/5">
+                        <span class="text-white text-sm font-medium font-['Inter']">Prototyping</span>
+                    </div>
+                    <div class="px-6 py-4 bg-white/10 rounded-lg backdrop-blur-sm border border-white/5">
+                        <span class="text-white text-sm font-medium font-['Inter']">Research &
+                            Brainstorming</span>
+                    </div>
+                    <div class="px-6 py-4 bg-white/10 rounded-lg backdrop-blur-sm border border-white/5">
+                        <span class="text-white text-sm font-medium font-['Inter']">Content design</span>
+                    </div>
+                </div>
+                <!-- Vibe Coded Annotation Inline Below Pills -->
+                <div class="mt-[8px] inline-flex items-center gap-[8px]">
+                    <svg class="h-[30px] md:h-[40px] w-auto opacity-90 drop-shadow-md pb-1" viewBox="0 0 55 40"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.6034 19.7923L13.3028 18.8385V18.8385L13.6034 19.7923ZM15.0059 11.8846L15.5646 11.0553L15.5626 11.054L15.0059 11.8846ZM54.8925 30.0593C55.0164 29.5211 54.6805 28.9843 54.1423 28.8604L45.3717 26.8415C44.8335 26.7176 44.2967 27.0535 44.1728 27.5917C44.0489 28.1299 44.3848 28.6666 44.923 28.7905L52.7191 30.5851L50.9245 38.3813C50.8006 38.9195 51.1365 39.4562 51.6747 39.5801C52.2129 39.704 52.7497 39.3681 52.8735 38.8299L54.8925 30.0593ZM2.21655 0.302122L1.26329 -2.03618e-05C-0.633251 5.9836 -0.256588 11.921 1.98769 16.0262C3.11549 18.0893 4.73156 19.7132 6.78695 20.5951C8.8499 21.4803 11.2635 21.5781 13.9039 20.7461L13.6034 19.7923L13.3028 18.8385C11.0524 19.5477 9.13829 19.4277 7.57556 18.7572C6.00526 18.0834 4.69764 16.8139 3.74257 15.0669C1.82108 11.5521 1.39521 6.20315 3.16982 0.604264L2.21655 0.302122ZM13.6034 19.7923L13.9039 20.7461C15.6736 20.1884 16.8649 19.3564 17.5279 18.2871C18.198 17.2064 18.23 16.0432 18.0043 15.0366C17.7814 14.0431 17.2984 13.1452 16.8427 12.4781C16.6118 12.1402 16.3782 11.8472 16.1703 11.6157C15.9792 11.4027 15.763 11.1889 15.5646 11.0553L15.0059 11.8846L14.4472 12.714C14.4344 12.7054 14.5174 12.7683 14.6821 12.9518C14.8302 13.1167 15.0094 13.3401 15.1913 13.6063C15.5611 14.1477 15.9038 14.8102 16.0527 15.4742C16.1987 16.1251 16.1485 16.7166 15.8282 17.2331C15.5009 17.761 14.7938 18.3687 13.3028 18.8385L13.6034 19.7923ZM15.0059 11.8846L15.5626 11.054C12.9837 9.32544 10.092 9.35126 7.55799 10.4141C5.04724 11.4672 2.84804 13.545 1.48232 16.0273C0.114455 18.5135 -0.463464 21.4955 0.424384 24.3468C1.31977 27.2223 3.65033 29.7884 7.74927 31.5235L8.13909 30.6026L8.52891 29.6817C4.84544 28.1225 3.01741 25.9471 2.33395 23.7522C1.64295 21.533 2.06592 19.1156 3.23462 16.9914C4.40547 14.8632 6.2785 13.1196 8.33157 12.2585C10.3614 11.4071 12.5251 11.4258 14.4491 12.7153L15.0059 11.8846ZM8.13909 30.6026L7.74927 31.5235C15.7005 34.8893 25.1058 36.0811 33.6141 35.7478C42.0958 35.4155 49.8498 33.5603 54.4484 30.6827L53.918 29.835L53.3875 28.9872C49.2118 31.6002 41.8588 33.4232 33.5358 33.7493C25.2395 34.0743 16.1425 32.9046 8.52891 29.6817L8.13909 30.6026Z"
+                            fill="#0EA655" />
+                    </svg>
+                    <span
+                        class="font-['Caveat'] text-[16px] md:text-[20px] text-[#FFFFFF] whitespace-nowrap pt-1 drop-shadow-md">This
+                        website has been vibe coded as well 🥰</span>
+                </div>
+            </div>
+
+            <div class="w-full h-px bg-white/10 mt-8"></div>
+        </div>
+
+
+        <!-- SECTION 1: PROTOTYPING -->
+        <div class="w-full max-w-[840px] px-6 flex flex-col gap-10 mb-20">
+            <div class="flex flex-col gap-2">
+                <h2 class="text-white text-[22px] font-bold font-['Inter'] leading-snug">Prototyping</h2>
+                <p class="text-white/[0.72] text-lg font-normal font-['Inter'] leading-relaxed">
+                    I love bringing screens & concepts to life through interactive prototypes. It brings me a sense of
+                    joy
+                    to see how things would work without relying much on technical know hows.
+                </p>
+            </div>
+
+            <div class="flex flex-col gap-6">
+                <!-- Combined Card: Inbox Priority Tuner -->
+                <div class="p-6 rounded-2xl border border-white/10 bg-[#0A0A0A]/85 backdrop-blur-md">
+                    <div class="flex flex-col gap-6">
+                        <!-- 1. Title Row -->
+                        <div class="flex justify-between items-start">
+                            <div class="flex flex-col gap-1">
+                                <h3 class="text-emerald-400 text-[22px] font-medium font-['Inter'] leading-snug">
+                                    Inbox priority tuner</h3>
+                                <span
+                                    class="text-xs text-emerald-400/60 uppercase tracking-widest font-bold">Interactive
+                                    Viz</span>
+                            </div>
+                        </div>
+
+                        <!-- 2. Image/Video (Moved Inside) -->
+                        <div
+                            class="w-full aspect-video bg-[#FFFFFF] rounded-2xl border border-white/10 overflow-hidden flex justify-center items-center">
+                            <video src="assets/project-how-i-ai/1. Inbox priority tuner.mp4" autoplay loop muted
+                                playsinline class="h-full w-auto object-contain"></video>
+                        </div>
+
+                        <!-- 3. Description -->
+                        <p class="text-white/[0.72] text-lg leading-relaxed">
+                            Built a simple interactive visualisation to help communicate the concept of prompt
+                            engineering and how output changes with the prompt depth & clarity.
+                        </p>
+                        <div class="mt-2 flex gap-4 text-sm">
+                            <span class="text-gray-500">Part of a bigger project: <a href="project-mobile-ai.html"
+                                    class="text-emerald-400 hover:text-emerald-300 transition-colors">Read case study
+                                    →</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full h-px bg-white/10 mt-10"></div>
+        </div>
+
+        <!-- SECTION 2: RESEARCH & BRAINSTORMING -->
+        <div class="w-full max-w-[840px] px-6 flex flex-col gap-10 mb-20">
+            <h2 class="text-white text-[22px] font-bold font-['Inter'] leading-snug">Research & Brainstorming</h2>
+
+            <!-- Card 1: Research Planner GEM -->
+            <div class="flex flex-col gap-6">
+                <div class="p-6 rounded-2xl border border-white/10 bg-[#0A0A0A]/85 backdrop-blur-md">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex justify-between items-start">
+                            <div class="flex flex-col gap-1">
+                                <h3 class="text-emerald-400 text-[22px] font-medium font-['Inter'] leading-snug">
+                                    Research planner GEM</h3>
+                            </div>
+                        </div>
+                        <p class="text-white/[0.72] text-lg leading-relaxed">
+                            Through a series of 7 annoying but important questions, this GEM helps users articulate,
+                            brainstorm
+                            and define a detailed research plan. These can range from creating simple surveys to
+                            detailed
+                            usability testing and user interview plans.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Insights Generator GEM -->
+            <div class="flex flex-col gap-6">
+                <div class="p-6 rounded-2xl border border-white/10 bg-[#0A0A0A]/85 backdrop-blur-md">
+                    <div class="flex flex-col gap-4">
+                        <div class="flex justify-between items-start">
+                            <div class="flex flex-col gap-1">
+                                <h3 class="text-emerald-400 text-[22px] font-medium font-['Inter'] leading-snug">
+                                    Insights generator GEM</h3>
+                            </div>
+                        </div>
+                        <p class="text-white/[0.72] text-lg leading-relaxed">
+                            The next step of the research is analysing the data that you’ve collected. This GEM helps
+                            process the transcripts and the data that you upload to craft meaningful insights by
+                            following
+                            the framework of Observation → Inference → Evidence.
+                        </p>
+                        <div class="w-full h-px bg-white/10"></div>
+                        <p class="text-white/[0.72] text-lg leading-relaxed">
+                            It also provides interviewer coaching by helping the user understand where they could’ve
+                            asked a
+                            better question to make the research more impactful.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full h-px bg-white/10 mt-10"></div>
+        </div>
+
+        <!-- SECTION 3: CONTENT DESIGN -->
+        <div class="w-full max-w-[840px] px-6 flex flex-col gap-10 mb-20">
+            <h2 class="text-white text-[22px] font-bold font-['Inter'] leading-snug">Content design</h2>
+
+            <div class="flex flex-col gap-6">
+                <!-- UX Writing Assistant -->
+                <div class="p-6 rounded-2xl border border-white/10 bg-[#0A0A0A]/85 backdrop-blur-md">
+                    <div class="flex flex-col gap-6">
+                        <!-- 1. Title -->
+                        <div class="flex justify-between items-start">
+                            <div class="flex flex-col gap-1">
+                                <h3 class="text-emerald-400 text-[22px] font-medium font-['Inter'] leading-snug">
+                                    UX Writing Assistant</h3>
+                            </div>
+                        </div>
+
+                        <!-- 2. Image (Moved Inside) -->
+                        <div
+                            class="w-full aspect-video bg-[#EEEEEE] rounded-2xl border border-white/10 overflow-hidden flex justify-center items-center">
+                            <video src="assets/project-how-i-ai/2. UX writing assistant.mp4" autoplay loop muted
+                                playsinline class="h-full w-auto object-contain"></video>
+                        </div>
+
+                        <!-- 3. Description -->
+                        <div class="flex flex-col gap-6">
+                            <!-- Problem -->
+                            <div>
+                                <span class="text-white font-bold text-lg block mb-1">Problem:</span>
+                                <p class="text-white/[0.72] text-lg leading-relaxed">
+                                    Observed that with only 3 UX writers supporting a team of 30+ designers, the
+                                    workload
+                                    was quite heavy and in their absence, projects would have to wait for long time.
+                                </p>
+                            </div>
+
+                            <div class="w-full h-px bg-white/10"></div>
+
+                            <!-- Solution -->
+                            <div>
+                                <span class="text-white font-bold text-lg block mb-1">Solution:</span>
+                                <p class="text-white/[0.72] text-lg leading-relaxed">
+                                    Using the UX writing guide that the team had created, I drafted a prompt and built a
+                                    CustomGPT initially. We eventually integrated the prompt and the guide into our
+                                    internal
+                                    AI tool for general access as well as built a figma plugin which uses the same
+                                    prompt.
+                                </p>
+                            </div>
+
+                            <div class="w-full h-px bg-white/10"></div>
+
+                            <!-- Impact -->
+                            <div>
+                                <span class="text-white font-bold text-lg block mb-1">Impact:</span>
+                                <p class="text-white/[0.72] text-lg leading-relaxed">
+                                    Designers could now upload their UI or use the plugin to get feedback on the copy
+                                    within
+                                    seconds! This increased the quality of copy used even in draft stages and helped
+                                    improve
+                                    communication.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 4: RELEASE NOTES (Added to Content Design or separate? User HTML implies separate) -->
+        <div class="w-full max-w-[840px] px-6 flex flex-col gap-10 mb-20">
+            <div class="flex flex-col gap-6">
+                <!-- Release Notes Assistant -->
+                <div class="p-6 rounded-2xl border border-white/10 bg-[#0A0A0A]/85 backdrop-blur-md">
+                    <div class="flex flex-col gap-6">
+                        <!-- 1. Title -->
+                        <div class="flex justify-between items-start">
+                            <div class="flex flex-col gap-1">
+                                <h3 class="text-emerald-400 text-[22px] font-medium font-['Inter'] leading-snug">
+                                    Release Notes Assistant</h3>
+                            </div>
+                        </div>
+
+                        <!-- 2. Image (Moved Inside) -->
+                        <div
+                            class="w-full aspect-video bg-[#131519] rounded-2xl border border-white/10 overflow-hidden flex justify-center items-center">
+                            <img src="assets/project-how-i-ai/3. Release notes assistant.png" alt="Release Notes"
+                                class="h-full w-auto object-contain">
+                        </div>
+
+                        <!-- 3. Description -->
+                        <div class="flex flex-col gap-6">
+                            <!-- Problem -->
+                            <div>
+                                <span class="text-white font-bold text-lg block mb-1">Problem:</span>
+                                <p class="text-white/[0.72] text-lg leading-relaxed">
+                                    This was another area where we would rely heavily on the content design team. In
+                                    their
+                                    absence, projects would get delayed.
+                                </p>
+                            </div>
+
+                            <div class="w-full h-px bg-white/10"></div>
+
+                            <!-- Solution -->
+                            <div>
+                                <span class="text-white font-bold text-lg block mb-1">Solution:</span>
+                                <p class="text-white/[0.72] text-lg leading-relaxed">
+                                    Drafted prompt with the specifics required for Android and iOS release notes. I
+                                    integrated it with our internal AI tool for general access.
+                                </p>
+                            </div>
+
+                            <div class="w-full h-px bg-white/10"></div>
+
+                            <!-- Impact -->
+                            <div>
+                                <span class="text-white font-bold text-lg block mb-1">Impact:</span>
+                                <p class="text-white/[0.72] text-lg leading-relaxed">
+                                    PMs & Designers could easily talk to this assistant to create apt release notes
+                                    every
+                                    time by simply sharing their PRDs, design specs or epics created in Wrike.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- To-do app Section from User HTML (Found at the end of the user request) -->
+            <div class="mt-10 flex flex-col gap-2">
+                <h2 class="text-white text-[22px] font-bold font-['Inter'] leading-snug">Experiments</h2>
+                <p class="text-gray-300 text-lg font-normal font-['Inter'] leading-relaxed mb-6">Just trying things out.
+                </p>
+
+                <div class="flex flex-col gap-6">
+                    <div class="p-6 rounded-2xl border border-white/10 bg-[#0A0A0A]/85 backdrop-blur-md">
+                        <div class="flex flex-col gap-6">
+                            <!-- 1. Title -->
+                            <div class="flex justify-between items-start">
+                                <div class="flex flex-col gap-1">
+                                    <h3 class="text-emerald-400 text-[22px] font-medium font-['Inter'] leading-snug">
+                                        To-do app + authentication</h3>
+                                </div>
+                            </div>
+
+                            <!-- 2. Image (Moved Inside) -->
+                            <div class="w-full aspect-video rounded-2xl border border-white/10 overflow-hidden flex justify-center items-center"
+                                style="background: linear-gradient(135deg, #697AE4 0.17%, #7451AA 99.83%);">
+                                <img src="assets/project-how-i-ai/4. To do app.png" alt="To Do App"
+                                    class="h-full w-auto object-contain">
+                            </div>
+
+                            <!-- 3. Description -->
+                            <p class="text-white/[0.72] text-lg leading-relaxed">
+                                For the joy of understanding how login & sign-up flows are actually built, tried my hand
+                                to building the entire flow (email verification, reset password, etc.) for a to-do app.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <app-footer></app-footer>
+
+    <script src="js/components.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

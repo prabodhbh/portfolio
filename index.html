@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prabodh | Product Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Inter:wght@400;500;800&family=Rajdhani:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/favicon-light.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="assets/favicon-dark.png" media="(prefers-color-scheme: dark)">
+</head>
+
+<body class="custom-cursor-active">
+
+    <div class="stage-container">
+        <div class="grid-floor"></div>
+        <div class="horizon-glow"></div>
+    </div>
+
+    <div class="noise"></div>
+    <canvas id="chromatic-canvas"></canvas>
+    <canvas id="chromatic-canvas"></canvas>
+
+    <!-- UPDATED HEADER -->
+    <!-- UPDATED HEADER -->
+    <app-navbar></app-navbar>
+
+    <!-- HERO SECTION -->
+    <main
+        class="relative z-10 flex items-center min-h-screen max-w-6xl mx-auto px-6 md:px-12 w-full pt-32 md:pt-20 pb-20 md:pb-0">
+
+        <div class="relative w-full flex flex-col md:block justify-center">
+
+            <!-- Photo Box (Desktop Only) -->
+            <div
+                class="hidden md:flex flex-col items-end absolute top-1/2 -translate-y-[40%] right-[calc(0px-75px)] md:right-[calc(3rem-75px)] lg:right-[calc(8rem-75px)] xl:right-[calc(10rem-75px)] z-10">
+
+                <div id="magic-photo-box"
+                    class="relative w-[380px] lg:w-[450px] aspect-[4/5] rounded-3xl bg-white/[0.01] backdrop-blur-sm overflow-hidden cursor-crosshair transition-all duration-500 group">
+                    <img src="assets/hero-1.jpg"
+                        class="photo-slide absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 md:opacity-0 z-0 transition-opacity duration-700">
+                    <img src="assets/hero-2.jpg"
+                        class="photo-slide absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 md:opacity-0 z-0 transition-opacity duration-700">
+                    <img src="assets/hero-3.jpg"
+                        class="photo-slide absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 md:opacity-0 z-0 transition-opacity duration-700">
+                    <!-- Duplicate 1st for loop if needed, but JS will handle indexing -->
+                </div>
+
+                <!-- Peekaboo Text (Outside Box) -->
+                <div id="psst-text"
+                    class="absolute -bottom-12 -right-12 group-hover:opacity-0 transition-opacity duration-300 z-20 flex flex-col items-center rotate-6 pointer-events-none">
+                    <span class="font-['Caveat'] text-[28px] lg:text-[32px] text-neutral-400 tracking-wide mb-[-10px]">
+                        Peekaboo
+                    </span>
+                    <svg width="60" height="60" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        class="text-neutral-500 opacity-80 -rotate-12">
+                        <path d="M45 45 C 25 45, 30 15, 5 10" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" fill="none" />
+                        <path d="M15 5 L 5 10 L 10 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" fill="none" />
+                    </svg>
+                </div>
+
+            </div>
+
+            <div class="w-full md:w-[75%] text-left relative z-20 pointer-events-none">
+
+                <!-- Badge -->
+                <div class="hero-badge" role="presentation">
+                    <div class="badge-highlight-top"></div>
+                    <div class="badge-highlight-bottom"></div>
+                    <div class="badge-content">
+                        <div class="badge-icon">
+                            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g stroke="rgba(205,220,255,0.85)" stroke-width="1.8" stroke-linecap="round">
+                                    <line x1="20" y1="4" x2="20" y2="36" />
+                                    <line x1="4" y1="20" x2="36" y2="20" />
+                                    <line x1="7.7" y1="7.7" x2="32.3" y2="32.3" />
+                                    <line x1="32.3" y1="7.7" x2="7.7" y2="32.3" />
+                                    <line x1="16.5" y1="10.5" x2="20" y2="7.5" />
+                                    <line x1="23.5" y1="10.5" x2="20" y2="7.5" />
+                                    <line x1="16.5" y1="29.5" x2="20" y2="32.5" />
+                                    <line x1="23.5" y1="29.5" x2="20" y2="32.5" />
+                                    <line x1="10.5" y1="16.5" x2="7.5" y2="20" />
+                                    <line x1="10.5" y1="23.5" x2="7.5" y2="20" />
+                                    <line x1="29.5" y1="16.5" x2="32.5" y2="20" />
+                                    <line x1="29.5" y1="23.5" x2="32.5" y2="20" />
+                                </g>
+                                <circle cx="20" cy="20" r="2.2" fill="rgba(205,220,255,0.92)" />
+                            </svg>
+                        </div>
+                        <span class="badge-label">👋 Hey, I'm Prabodh</span>
+                    </div>
+                </div>
+
+                <!-- Headline -->
+                <h1
+                    class="text-[3.5rem] sm:text-6xl lg:text-[84px] font-extrabold tracking-tighter mb-6 md:mb-8 leading-[1.05] text-white drop-shadow-2xl">
+                    I organize chaos<br />into perfect pixels.
+                </h1>
+
+                <!-- Subtext -->
+                <p
+                    class="max-w-[760px] text-xl lg:text-[22px] text-neutral-400 font-normal leading-relaxed mb-6 md:mb-8 drop-shadow-md">
+                    Turning messy requirements into inevitable interfaces. Logic, vibes, and pixels in the perfect
+                    place.
+                </p>
+
+                <!-- Logos / Experience -->
+                <div
+                    class="text-lg lg:text-xl text-white/[0.96] font-normal tracking-wide pointer-events-auto flex flex-wrap items-center gap-x-2 gap-y-2">
+                    <span>Sr. Product Designer at</span>
+
+                    <span class="inline-flex items-center gap-1.5 hover:opacity-100 transition-opacity" title="Wrike">
+                        <!-- Custom Wrike Checkmark SVG -->
+                        <svg class="h-4 lg:h-5 w-auto text-white/[0.96] fill-current" width="32" height="32"
+                            viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M7.50549 13.3804C9.0548 13.3804 9.78498 13.6656 10.9069 14.7887L16.926 20.8142C17.1041 20.9924 17.1397 21.0637 17.1754 21.1707C17.1932 21.2063 17.1932 21.2598 17.1932 21.2955C17.1932 21.3311 17.1932 21.3846 17.1754 21.4203C17.1397 21.5272 17.1041 21.5985 16.926 21.7768L12.8124 25.9126C12.6343 26.0909 12.563 26.1266 12.4562 26.1622C12.4206 26.18 12.3671 26.18 12.3315 26.18C12.2959 26.18 12.2425 26.18 12.2069 26.1622C12.1 26.1266 12.0288 26.0909 11.8507 25.9126L0.186328 14.236C-0.15204 13.8973 -0.0273678 13.3804 0.542488 13.3804H7.50549Z"
+                                fill="currentColor" />
+                            <path
+                                d="M24.4946 6.01781C22.9452 6.01781 22.2151 6.30309 21.0932 7.42612L15.074 13.4516C14.8959 13.6299 14.8603 13.7012 14.8247 13.8082C14.8069 13.8438 14.8069 13.8973 14.8069 13.9329C14.8069 13.9686 14.8069 14.0221 14.8247 14.0577C14.8603 14.1647 14.8959 14.236 15.074 14.4143L19.1877 18.5323C19.3658 18.7106 19.437 18.7462 19.5438 18.7819C19.5795 18.7997 19.6329 18.7997 19.6685 18.7997C19.7041 18.7997 19.7575 18.7997 19.7932 18.7819C19.9 18.7462 19.9712 18.7106 20.1493 18.5323L31.8137 6.8557C32.152 6.51699 32.0274 6 31.4575 6H24.4946V6.01781Z"
+                                fill="currentColor" />
+                        </svg>
+                        <span class="font-bold tracking-tight text-white/[0.96] leading-none text-lg">Wrike</span>
+                    </span>
+
+                    <span>, previously at</span>
+
+                    <span class="inline-flex items-center gap-1.5 hover:opacity-100 transition-opacity"
+                        title="Razorpay">
+                        <svg class="h-4 lg:h-5 w-auto" width="140" height="29" viewBox="0 0 140 29" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_541_25812)">
+                                <path
+                                    d="M9.05506 7.84167L7.89209 12.1222L14.5487 7.81731L10.1951 24.0606L14.6167 24.0642L21.0481 0.0722656"
+                                    fill="white" />
+                                <path
+                                    d="M1.89031 17.2357L0.059082 24.0644H9.12142L12.8297 10.173L1.89031 17.2357ZM33.3696 11.2237C33.1481 12.047 32.7213 12.6518 32.0848 13.038C31.4498 13.4234 30.5586 13.6169 29.4081 13.6169H25.7531L27.0364 8.83204H30.6915C31.8404 8.83204 32.6298 9.02403 33.058 9.41538C33.4863 9.80673 33.5897 10.4048 33.3696 11.2318V11.2237ZM37.1539 11.1285C37.6191 9.40061 37.4271 8.07149 36.5765 7.14111C35.7273 6.21812 34.2372 5.75293 32.1107 5.75293H23.9536L19.0433 24.0725H23.0062L24.9851 16.6886H27.5843C28.1676 16.6886 28.6269 16.7846 28.9621 16.9692C29.2981 17.1612 29.4953 17.4934 29.5558 17.9734L30.2632 24.0725H34.509L33.8208 18.3869C33.6805 17.1169 33.0994 16.3711 32.0782 16.1496C33.38 15.773 34.4706 15.1453 35.3493 14.274C36.2218 13.4091 36.8452 12.325 37.1539 11.1358V11.1285ZM46.787 17.5156C46.4548 18.7561 45.9453 19.6939 45.2563 20.351C44.5667 21.0082 43.7426 21.3331 42.7812 21.3331C41.8021 21.3331 41.1383 21.0156 40.7876 20.3732C40.4361 19.7308 40.4243 18.8004 40.7506 17.582C41.077 16.3637 41.5976 15.4112 42.3138 14.7244C43.0301 14.0377 43.8674 13.6944 44.8288 13.6944C45.7887 13.6944 46.4459 14.0267 46.7782 14.6861C47.1178 15.3484 47.1252 16.2958 46.7929 17.5289L46.787 17.5156ZM48.5237 11.0325L48.0275 12.8858C47.8134 12.2213 47.3977 11.6896 46.7833 11.2909C46.1675 10.8996 45.4055 10.7002 44.4965 10.7002C43.3816 10.7002 42.3109 10.9882 41.2845 11.5641C40.2581 12.1401 39.3573 12.9523 38.5894 14.0008C37.8214 15.0493 37.2602 16.2382 36.8984 17.5747C36.544 18.9185 36.4702 20.0926 36.6843 21.1116C36.9058 22.1379 37.371 22.9206 38.0872 23.4671C38.8109 24.0209 39.7339 24.2941 40.8636 24.2941C41.7613 24.2986 42.6489 24.1045 43.4628 23.7255C44.2674 23.3626 44.9831 22.8283 45.5598 22.1601L45.0429 24.0917H48.8752L52.3745 11.0391H48.5348L48.5237 11.0325ZM66.1456 11.0325H55.001L54.222 13.9417H60.7066L52.1338 21.3479L51.4013 24.0799H62.9055L63.6845 21.1706H56.7362L65.4404 13.6538L66.1456 11.0325ZM75.9552 17.4934C75.6103 18.7782 75.0986 19.7441 74.423 20.3732C73.7474 21.0082 72.9292 21.3257 71.9686 21.3257C69.9601 21.3257 69.3 20.0483 69.9852 17.4934C70.3249 16.2234 70.8388 15.2686 71.5255 14.6255C72.2122 13.9801 73.0444 13.6582 74.0228 13.6582C74.9827 13.6582 75.631 13.9779 75.9648 14.6218C76.2985 15.2642 76.2956 16.2219 75.9552 17.492V17.4934ZM78.1984 11.5235C77.316 10.9741 76.19 10.6994 74.8166 10.6994C73.4262 10.6994 72.1391 10.9727 70.9548 11.5191C69.7753 12.0621 68.7387 12.8726 67.9273 13.8864C67.0929 14.9127 66.4926 16.1163 66.1242 17.4897C65.7624 18.858 65.7181 20.0594 65.9986 21.0879C66.2792 22.1143 66.8699 22.9044 67.756 23.4508C68.6495 24.0017 69.7866 24.2756 71.1822 24.2756C72.5556 24.2756 73.833 23.9994 75.0071 23.4501C76.1811 22.8978 77.1853 22.1136 78.0197 21.0798C78.8541 20.0505 79.4522 18.8499 79.8214 17.4765C80.1906 16.103 80.2349 14.9039 79.9543 13.8731C79.6737 12.8467 79.0904 12.0566 78.2117 11.5065L78.1984 11.5235ZM91.8794 14.5192L92.8615 10.9675C92.5292 10.7977 92.0936 10.709 91.5472 10.709C90.6685 10.709 89.8267 10.9261 89.0145 11.3662C88.3159 11.7398 87.7223 12.2671 87.2202 12.9272L87.7296 11.0147L86.6169 11.0192H83.8848L80.3627 24.0666H84.2488L86.0764 17.2461C86.3422 16.2544 86.8207 15.4739 87.5111 14.9201C88.1978 14.3641 89.0543 14.0857 90.0881 14.0857C90.7231 14.0857 91.3138 14.2312 91.875 14.5214L91.8794 14.5192ZM102.693 17.5562C102.36 18.7746 101.858 19.7049 101.171 20.3473C100.485 20.9927 99.6577 21.3146 98.6978 21.3146C97.7379 21.3146 97.0807 20.9897 96.7337 20.34C96.3792 19.6865 96.3718 18.745 96.7041 17.5075C97.0364 16.2707 97.5459 15.3218 98.2474 14.6646C98.9489 14.0023 99.7759 13.6715 100.736 13.6715C101.681 13.6715 102.316 14.0112 102.656 14.6979C102.995 15.3846 103.003 16.3371 102.676 17.5555L102.693 17.5562ZM105.394 11.5449C104.674 10.969 103.754 10.681 102.639 10.681C101.662 10.681 100.731 10.9025 99.8482 11.35C98.9658 11.7967 98.2496 12.4059 97.6995 13.1768L97.7128 13.0882L98.3648 11.0133H94.5694L93.6021 14.624L93.5726 14.7496L89.5852 29.6238H93.4766L95.485 22.1365C95.6844 22.8025 96.0905 23.3253 96.7108 23.7034C97.331 24.0799 98.0967 24.2667 99.0072 24.2667C100.137 24.2667 101.215 23.9935 102.238 23.4471C103.264 22.8992 104.15 22.1106 104.903 21.0916C105.656 20.0727 106.215 18.8912 106.572 17.5547C106.934 16.216 107.008 15.022 106.801 13.9772C106.591 12.9309 106.125 12.1209 105.405 11.5479L105.394 11.5449ZM118.301 17.503C117.969 18.7362 117.46 19.6813 116.773 20.3311C116.086 20.9853 115.259 21.3109 114.299 21.3109C113.317 21.3109 112.653 20.9934 112.306 20.351C111.951 19.7086 111.944 18.7782 112.269 17.5599C112.594 16.3415 113.112 15.389 113.828 14.7023C114.545 14.0156 115.383 13.673 116.344 13.673C117.304 13.673 117.954 14.0053 118.293 14.6624C118.633 15.3218 118.635 16.2692 118.304 17.5052L118.301 17.503ZM120.037 11.0162L119.54 12.8696C119.326 12.2013 118.912 11.6697 118.299 11.2747C117.679 10.8804 116.918 10.6839 116.01 10.6839C114.895 10.6839 113.819 10.9719 112.791 11.5479C111.764 12.1238 110.864 12.9316 110.096 13.9772C109.328 15.0228 108.767 16.2145 108.405 17.551C108.047 18.8927 107.976 20.069 108.191 21.0924C108.407 22.1114 108.873 22.8985 109.594 23.4479C110.313 23.9943 111.24 24.2704 112.37 24.2704C113.278 24.2704 114.146 24.0814 114.969 23.7019C115.772 23.3373 116.486 22.8024 117.061 22.1343L116.544 24.0674H120.376L123.875 11.0199H120.043L120.037 11.0162ZM139.964 11.0207L139.966 11.017H137.611C137.535 11.017 137.469 11.0207 137.4 11.0221H136.178L135.55 11.8934L135.395 12.1002L135.329 12.2036L130.363 19.1209L129.337 11.0207H125.27L127.33 23.3297L122.781 29.6282H126.835L127.935 28.068C127.966 28.0222 127.994 27.9838 128.031 27.9351L129.316 26.1113L129.353 26.0596L135.107 17.9003L139.959 11.0332L139.966 11.0288H139.964V11.0207Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_541_25812">
+                                    <rect width="140" height="29" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- WORK SECTION -->
+    <section id="work" class="relative z-10 max-w-7xl mx-auto px-6 pt-32 pb-[180px]">
+
+        <!-- Work Header -->
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div>
+                <h2 class="text-5xl md:text-6xl font-bold tracking-tight text-white">Selected Work</h2>
+            </div>
+            <div class="mt-8 md:mt-0 text-right">
+                <span class="block text-[10px] font-bold tracking-widest text-neutral-500 uppercase mb-1">My Role</span>
+                <span class="text-lg text-neutral-200 font-medium">Design, Strategy & Sweat</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[500px]">
+
+            <!-- Card 1: Loan Self Serve -->
+            <a href="project-bank-statement.html"
+                class="group relative md:col-span-1 w-full h-full rounded-[32px] overflow-hidden border border-white/10 bg-neutral-900 cursor-pointer block">
+                <img src="assets/1. Loan self serve.png" alt="Fintech UI"
+                    class="zoom-image absolute inset-0 h-full w-full object-cover opacity-60" />
+                <div class="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-black/80 to-transparent opacity-60">
+                </div>
+
+                <div
+                    class="absolute top-6 right-6 p-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                    <svg class="w-6 h-6 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </div>
+
+                <div
+                    class="absolute bottom-4 left-4 right-4 p-6 rounded-2xl border border-white/10 bg-[#0A0A0A]/85 backdrop-blur-xl shadow-2xl transition-colors duration-300 group-hover:bg-[#0A0A0A]/95">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-white font-bold text-2xl leading-tight">Loan Self Serve</h3>
+                            <p class="text-neutral-400 text-sm mt-1 font-medium">Fintech Onboarding</p>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-emerald-400 font-bold text-2xl">65.2%</div>
+                            <div class="text-[9px] text-neutral-500 uppercase tracking-wider font-bold">Success</div>
+                        </div>
+                    </div>
+                    <div class="expand-content">
+                        <div class="overflow-hidden">
+                            <div class="pt-4 mt-4 border-t border-white/10">
+                                <p class="text-neutral-300 text-sm leading-relaxed">
+                                    Designed an intuitive onboarding experience to help users upload bank statements and
+                                    fix errors instantly.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 2: Wrike Mobile AI -->
+            <a href="project-mobile-ai.html"
+                class="group relative md:col-span-2 w-full h-full rounded-[32px] overflow-hidden border border-white/10 bg-neutral-900 cursor-pointer block">
+                <img src="assets/2. Wrike Mobile AI.png" alt="AI Feature"
+                    class="zoom-image absolute inset-0 h-full w-full object-cover opacity-60" />
+                <div class="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-black/80 to-transparent opacity-60">
+                </div>
+
+                <div
+                    class="absolute top-6 right-6 p-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                    <svg class="w-6 h-6 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </div>
+
+                <div
+                    class="absolute bottom-4 left-4 right-4 p-6 rounded-2xl border border-white/10 bg-[#0A0A0A]/85 backdrop-blur-xl shadow-2xl transition-colors duration-300 group-hover:bg-[#0A0A0A]/95">
+                    <div class="flex flex-col md:flex-row justify-between md:items-end gap-4">
+                        <div class="md:w-2/3">
+                            <h3 class="text-white font-bold text-2xl leading-tight">Wrike Mobile AI</h3>
+                            <p class="text-neutral-400 text-sm mt-1 font-medium">Native iOS/Android</p>
+                        </div>
+                        <div class="flex items-center gap-6 md:border-l border-white/10 md:pl-6">
+                            <div>
+                                <div class="text-emerald-400 font-bold text-2xl">89%</div>
+                                <div class="text-[9px] text-neutral-500 uppercase tracking-wider font-bold">Adoption
+                                </div>
+                            </div>
+                            <div>
+                                <div class="text-white font-bold text-2xl">1.5M</div>
+                                <div class="text-[9px] text-neutral-500 uppercase tracking-wider font-bold">Monthly
+                                    Actions</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expand-content">
+                        <div class="overflow-hidden">
+                            <div class="pt-4 mt-4 border-t border-white/10">
+                                <p class="text-neutral-300 text-sm leading-relaxed max-w-lg">
+                                    Led designs and prompt engineering to prioritise inbox notifications on mobile. This
+                                    feature reduced noise for enterprise users.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 3: Nexus UI System -->
+            <a href="project-bank-downtime.html"
+                class="group relative md:col-span-2 w-full h-full rounded-[32px] overflow-hidden border border-white/10 bg-neutral-900 cursor-pointer block">
+                <img src="assets/3. Bank downtime.png" alt="Design System"
+                    class="zoom-image absolute inset-0 h-full w-full object-cover opacity-60" />
+                <div class="absolute top-0 inset-x-0 h-64 bg-gradient-to-b from-black/80 to-transparent opacity-60">
+                </div>
+
+                <div
+                    class="absolute top-6 right-6 p-3 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-white opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+                    <svg class="w-6 h-6 -rotate-45" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </div>
+
+                <div
+                    class="absolute bottom-4 left-4 right-4 p-6 rounded-2xl border border-white/10 bg-[#0A0A0A]/85 backdrop-blur-xl shadow-2xl transition-colors duration-300 group-hover:bg-[#0A0A0A]/95">
+                    <div class="flex flex-col md:flex-row justify-between md:items-end gap-4">
+                        <div class="md:w-2/3">
+                            <h3 class="text-white font-bold text-2xl leading-tight">Bank downtime comms</h3>
+                            <p class="text-neutral-400 text-sm mt-1 font-medium">Growth & optimization</p>
+                        </div>
+                        <div class="flex items-center gap-6 md:border-l border-white/10 md:pl-6">
+                            <div>
+                                <div class="text-emerald-400 font-bold text-2xl">67%</div>
+                                <div class="text-[9px] text-neutral-500 uppercase tracking-wider font-bold">Lesser
+                                    Tickets
+                                </div>
+                            </div>
+                            <div>
+                                <div class="text-white font-bold text-2xl">16%</div>
+                                <div class="text-[9px] text-neutral-500 uppercase tracking-wider font-bold">Fewer
+                                    Detractors
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="expand-content">
+                        <div class="overflow-hidden">
+                            <div class="pt-4 mt-4 border-t border-white/10">
+                                <p class="text-neutral-300 text-sm leading-relaxed max-w-lg">
+                                    Established a unified visual language and component library to speed up development
+                                    cycles across 4 separate teams.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 4: How I AI (Link) -->
+            <a href="project-how-i-ai.html"
+                class="group relative md:col-span-1 w-full h-full rounded-[32px] overflow-hidden border border-white/10 bg-[#080808] cursor-pointer block">
+
+                <div class="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 z-20">
+                </div>
+
+                <div class="absolute inset-[-50%] z-0">
+                    <div
+                        class="w-full h-full animate-[spin_8s_linear_infinite] bg-[conic-gradient(from_0deg,#080808_0deg,#8b5cf6_120deg,#ec4899_240deg,#080808_360deg)] blur-[80px] opacity-40">
+                    </div>
+                </div>
+
+                <div class="relative z-20 h-full flex flex-col items-center justify-center p-8">
+                    <div
+                        class="mb-6 p-4 rounded-full bg-gradient-to-tr from-violet-500/20 to-fuchsia-500/20 border border-white/10 sparkle-icon">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white text-center mb-2">How I AI</h3>
+                    <p class="text-neutral-400 text-sm text-center leading-relaxed">
+                        Explore my experiments, prompt engineering workflows, and AI demos.
+                    </p>
+                    <div
+                        class="mt-6 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-widest text-white group-hover:bg-white/10 transition-colors">
+                        View Lab
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    </div>
+    </section>
+
+    <!-- HOW I AI SECTION REMOVED -->
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="relative z-10 max-w-7xl mx-auto px-6 pb-32">
+        <div class="max-w-2xl mx-auto text-center mb-16">
+            <h2 class="text-4xl font-bold tracking-tight mb-6">Life outside the box</h2>
+            <p class="text-gray-400 leading-relaxed">
+                I don't just stare at screens. I stare at race tracks, ocean waves, and my cat (who frankly, is the real
+                creative director here).
+            </p>
+        </div>
+
+        <!-- Photo Marquee -->
+        <div class="marquee-container w-full overflow-hidden">
+            <div class="marquee-content">
+                <!-- Doubled for seamless loop -->
+                <div class="marquee-item"><img src="assets/home/20231004_214346.jpg" alt="Gallery Photo 1"></div>
+                <div class="marquee-item"><img src="assets/home/20250925_173728.jpg" alt="Gallery Photo 2"></div>
+                <div class="marquee-item"><img src="assets/home/20260127_013100.jpg" alt="Gallery Photo 3"></div>
+                <div class="marquee-item"><img src="assets/home/IMG_7514.jpg" alt="Gallery Photo 4"></div>
+                <div class="marquee-item"><img src="assets/home/IMG_9954.jpg" alt="Gallery Photo 5"></div>
+                <div class="marquee-item"><img src="assets/home/PXL_20231020_053923002.jpg" alt="Gallery Photo 6"></div>
+                <div class="marquee-item"><img src="assets/home/PXL_20231020_060721565.jpg" alt="Gallery Photo 7"></div>
+
+                <div class="marquee-item"><img src="assets/home/20231004_214346.jpg" alt="Gallery Photo 1"></div>
+                <div class="marquee-item"><img src="assets/home/20250925_173728.jpg" alt="Gallery Photo 2"></div>
+                <div class="marquee-item"><img src="assets/home/20260127_013100.jpg" alt="Gallery Photo 3"></div>
+                <div class="marquee-item"><img src="assets/home/IMG_7514.jpg" alt="Gallery Photo 4"></div>
+                <div class="marquee-item"><img src="assets/home/IMG_9954.jpg" alt="Gallery Photo 5"></div>
+                <div class="marquee-item"><img src="assets/home/PXL_20231020_053923002.jpg" alt="Gallery Photo 6"></div>
+                <div class="marquee-item"><img src="assets/home/PXL_20231020_060721565.jpg" alt="Gallery Photo 7"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <!-- FOOTER -->
+    <app-footer></app-footer>
+
+    <script src="js/components.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
