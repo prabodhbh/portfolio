@@ -24,6 +24,11 @@ body {
     .custom-cursor-active * {
         cursor: auto !important;
     }
+
+    /* Completely hide the canvas drawing the custom cursor for mobile devices */
+    #chromatic-canvas {
+        display: none !important;
+    }
 }
 
 /* --- 1. THE STAGE (Structural Lighting) --- */
