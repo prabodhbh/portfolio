@@ -18,6 +18,14 @@ body {
     /* Custom cursor active only when tagged */
 }
 
+@media (pointer: coarse) {
+
+    .custom-cursor-active,
+    .custom-cursor-active * {
+        cursor: auto !important;
+    }
+}
+
 /* --- 1. THE STAGE (Structural Lighting) --- */
 /* This replaces the "White Blur" with a controlled horizon */
 .stage-container {
@@ -61,8 +69,12 @@ body {
 .marquee-content {
     display: inline-flex;
     gap: 1.5rem;
-    animation: marquee 40s linear infinite;
-    /* Slower for better viewing */
+    animation: marquee 30s linear infinite;
+    /* Faster speed for more dynamic feel */
+}
+
+.marquee-content.reverse {
+    animation-direction: reverse;
 }
 
 /* Pause animation on hover */
@@ -81,6 +93,10 @@ body {
     position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
+}
+
+.marquee-item.landscape {
+    width: 450px;
 }
 
 .marquee-item:hover {
@@ -198,6 +214,11 @@ body {
     border-radius: 9999px;
     /* Pill shape */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease-in-out, background 0.4s ease;
+}
+
+.nav-pill.nav-hidden {
+    transform: translate(-50%, -150%);
 }
 
 .nav-link {

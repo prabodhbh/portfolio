@@ -104,6 +104,37 @@ class AppNavbar extends HTMLElement {
                 spans[2].classList.remove('-rotate-45', '-translate-y-2');
             }
         }
+
+        // --- Scroll Logic for Sliding Navbar ---
+        let lastScrollY = window.scrollY;
+        const desktopNav = this.querySelector('.nav-pill');
+        const mobileNavContainer = this.querySelector('#mobile-nav');
+
+        // Note: For mobile-nav, we'll translate it up. Its original class has top-8 (2rem).
+        // Let's add a nav-hidden class for mobile as well.
+        mobileNavContainer.style.transition = 'transform 0.4s ease-in-out, height 0.5s ease[cubic-bezier(0.32,0.725,0.25,1)], background-color 0.5s';
+
+        // We'll use JS to assign the transform since we don't want to mess up Tailwind classes if we can avoid it.
+        // Actually, creating a CSS class is cleaner. Let's just toggle 'transform:-translateY(150%)'
+
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            // Don't hide if menu is open on mobile
+            if (isOpen) return;
+
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                // Scrolling down & past threshold -> Hide
+                if (desktopNav) desktopNav.classList.add('nav-hidden');
+                if (mobileNavContainer) mobileNavContainer.style.transform = 'translateY(min(-150%, -100px))';
+            } else {
+                // Scrolling up -> Show
+                if (desktopNav) desktopNav.classList.remove('nav-hidden');
+                if (mobileNavContainer) mobileNavContainer.style.transform = 'translateY(0)';
+            }
+
+            lastScrollY = currentScrollY;
+        }, { passive: true });
     }
 }
 
