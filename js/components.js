@@ -7,7 +7,7 @@ class AppNavbar extends HTMLElement {
             <a href="project-how-i-ai.html" class="nav-link">How I AI</a>
             <a href="index.html" class="nav-brand">PB</a>
             <a href="index.html#about" class="nav-link">About</a>
-            <a href="https://drive.google.com/file/d/1DP5I-LkXqicd64i75C9EQXtzkQJuTEa7/view?usp=sharing" target="_blank"
+            <a href="https://drive.google.com/file/d/1DP5I-LkXqicd64i75C9EQXtzkQJuTEa7/view?usp=sharing" target="_blank" rel="noopener noreferrer"
                 class="nav-link">Resume</a>
         </nav>
 
@@ -32,7 +32,7 @@ class AppNavbar extends HTMLElement {
                 <a href="index.html#about" class="mobile-link text-lg font-['Inter'] font-medium text-gray-400 hover:text-white transition-colors">About</a>
                 <a href="index.html#work" class="mobile-link text-lg font-['Inter'] font-medium text-gray-400 hover:text-white transition-colors">Work</a>
                 <a href="project-how-i-ai.html" class="mobile-link text-lg font-['Inter'] font-medium text-gray-400 hover:text-white transition-colors">How I AI</a>
-                <a href="https://drive.google.com/file/d/1DP5I-LkXqicd64i75C9EQXtzkQJuTEa7/view?usp=sharing" target="_blank" class="mobile-link text-lg font-['Inter'] font-medium text-gray-400 hover:text-white transition-colors">Resume</a>
+                <a href="https://drive.google.com/file/d/1DP5I-LkXqicd64i75C9EQXtzkQJuTEa7/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="mobile-link text-lg font-['Inter'] font-medium text-gray-400 hover:text-white transition-colors">Resume</a>
             </div>
         </div>
         `;
