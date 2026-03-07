@@ -68,18 +68,42 @@ body {
     overflow: hidden;
     white-space: nowrap;
     position: relative;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    width: 100%;
+}
+
+/* Performant Fade Effect using Pseudo Elements */
+.marquee-container::before,
+.marquee-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, var(--bg-deep) 0%, transparent 100%);
+}
+
+.marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, var(--bg-deep) 0%, transparent 100%);
 }
 
 .marquee-content {
     display: inline-flex;
     gap: 1.5rem;
     animation: marquee 30s linear infinite;
+    will-change: transform;
     /* Faster speed for more dynamic feel */
 }
 
 .marquee-content.reverse {
     animation-direction: reverse;
+    will-change: transform;
 }
 
 /* Pause animation on hover */
@@ -126,7 +150,8 @@ body {
     }
 
     100% {
-        transform: translateX(-50%);
+        /* Move exactly half of the flex width to sync with the duplicated set */
+        transform: translateX(calc(-50% - 0.75rem));
     }
 }
 
