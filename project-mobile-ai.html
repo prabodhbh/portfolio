@@ -17,38 +17,29 @@
 
 <body class="bg-[#020202] text-white overflow-x-hidden">
 
-    <div class="stage-container">
-        <div class="grid-floor"></div>
-        <div class="horizon-glow"></div>
-    </div>
-
-    <div class="noise"></div>
     <!-- Canvas Removed for Project Pages -->
 
     <!-- UPDATED HEADER (From index.html) -->
     <!-- UPDATED HEADER (From index.html) -->
     <app-navbar></app-navbar>
 
-    <!-- MAIN CONTAINER -->
-    <!-- Added pt-32 to prevent fixed nav overlap -->
-    <main class="w-full relative z-10 flex flex-col items-center pt-32">
+    <!-- Added pt-[220px] to ensure 120px spacing from nav header -->
+    <main class="w-full relative z-10 flex flex-col items-center pt-[220px]">
 
         <!-- HERO SECTION -->
-        <div class="w-full flex flex-col items-center py-20 gap-6">
+        <div class="w-full flex flex-col items-center pb-20 gap-6">
             <div class="w-full max-w-[840px] px-6 flex flex-col gap-6">
+                <!-- TITLE & SUBTITLE -->
+                <div class="flex flex-col gap-2">
+                    <h1 class="text-white text-3xl md:text-[32px] font-medium font-['Inter'] leading-tight">Designed one
+                        of the 1st AI features at Wrike</h1>
+                </div>
+
                 <!-- HERO IMAGE PLACEHOLDER -->
                 <div class="w-full aspect-[16/9] md:h-[420px] rounded-2xl border border-white/10 overflow-hidden relative group"
                     style="background: linear-gradient(127deg, #F1F5F9 -13.69%, #E2E8F0 118.02%);">
                     <video src="assets/project-mobile-ai/1. Hero video.mp4" autoplay loop muted playsinline
                         class="w-full h-full object-contain"></video>
-                </div>
-
-                <!-- TITLE & SUBTITLE -->
-                <div class="flex flex-col gap-2">
-                    <h1 class="text-white text-3xl md:text-[32px] font-medium font-['Inter'] leading-tight">Designed one
-                        of the 1st AI features at Wrike</h1>
-                    <p class="text-gray-400 text-lg font-normal font-['Inter'] leading-relaxed">Led the designs and
-                        prompt engineering to help prioritise inbox notifications on mobile.</p>
                 </div>
             </div>
         </div>
@@ -58,30 +49,32 @@
             <div class="w-full max-w-[840px] px-6 flex flex-col gap-14">
 
                 <!-- About & Overview Container Cards -->
-                <div
-                    class="px-8 pt-8 pb-12 bg-gradient-to-b from-white/[0.06] to-transparent border border-white/10 rounded-[32px] flex flex-col gap-14 relative overflow-hidden backdrop-blur-sm mb-8">
+                <div class="flex flex-col gap-14 mb-8">
 
-                    <!-- About Wrike -->
+                    <!-- Context -->
                     <div class="flex flex-col gap-2 relative z-10">
-                        <h2 class="text-white text-[22px] font-medium font-['Inter'] leading-snug">About Wrike</h2>
-                        <p class="text-gray-300 text-lg font-normal font-['Inter'] leading-relaxed">Wrike is a
-                            collaborative
-                            work management platform (Similar platforms: Monday.com, Asana, Clickup). While the desktop
-                            focuses on a full fledged experience, the mobile app acts as a companion app enabling
-                            collaboration on the go.</p>
+                        <h2 class="text-white text-[22px] font-medium font-['Inter'] leading-snug">Context</h2>
+                        <p class="text-gray-300 text-lg font-normal font-['Inter'] leading-relaxed">Tools like Wrike
+                            (collaborative work management) help people managers, project managers, C-suite executives
+                            and ICs collaborate in real time to ensure on time delivery of projects.</p>
                     </div>
 
-                    <!-- Overview -->
+                    <!-- Problem statement -->
                     <div class="flex flex-col gap-2 relative z-10">
-                        <h2 class="text-white text-[22px] font-medium font-['Inter'] leading-snug">Overview</h2>
-                        <p class="text-gray-300 text-lg font-normal font-['Inter'] leading-relaxed">45% of Users on
-                            Wrike
-                            receive more than 6 and upto 50 notifications a day. In a sea of notifications, it becomes
-                            difficult to identify and take action on the most urgent and important ones quickly. The new
-                            priority inbox simplifies this process for the users by categorising all notifications into
-                            ‘Urgent’, ‘Important’ and ‘Others’ buckets based on the notification context. This
-                            significantly
-                            reduces the cognitive load and stress on users.</p>
+                        <h2 class="text-white text-[22px] font-medium font-['Inter'] leading-snug">Problem statement
+                        </h2>
+                        <p class="text-gray-300 text-lg font-normal font-['Inter'] leading-relaxed">When notifications
+                            arrive as a flat, chronological list, users receiving 6 - 50 alerts a day are forced to
+                            manually scan everything to find what matters; causing urgent tasks and deadlines to get
+                            buried, and increasing cognitive load</p>
+                    </div>
+
+                    <!-- Solution summary -->
+                    <div class="flex flex-col gap-2 relative z-10">
+                        <h2 class="text-white text-[22px] font-medium font-['Inter'] leading-snug">Solution summary</h2>
+                        <p class="text-gray-300 text-lg font-normal font-['Inter'] leading-relaxed">I designed a
+                            solution which leverages AI capabilities to understand the context of the notification and
+                            it’s task/project and then prioritises it for the user.</p>
                     </div>
                 </div>
 
@@ -158,279 +151,46 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+
+        </div>
         </div>
 
-        <!-- PROBLEM SECTION (Full width background) -->
-        <div class="w-full flex flex-col items-center py-20 gap-16 bg-white/[0.02]">
-            <div class="w-full max-w-[840px] px-6 flex flex-col gap-16">
 
-                <!-- Statement -->
-                <div class="flex flex-col gap-2">
-                    <h2 class="text-white text-[22px] font-medium font-['Inter'] leading-snug">Problem Statement</h2>
-                    <p class="text-gray-300 text-lg font-normal font-['Inter'] leading-relaxed">A chronological inbox
-                        makes people scan, not decide. For ~45% of users getting 6-50 notifications/day, urgent
-                        approvals and blockers are routinely buried, raising the risk of missed deadlines and stalled
-                        work.</p>
-                </div>
-
-                <!-- Pain Point 1 -->
-                <div class="flex flex-col gap-6">
-                    <h3 class="text-white text-xl font-medium font-['Inter'] leading-relaxed">Pain point 1: Notification
-                        overload</h3>
-                    <div class="flex flex-col gap-4">
-                        <div class="p-5 bg-white/5 border border-white/10 rounded-2xl flex flex-col gap-2">
-                            <img class="w-full object-cover rounded-lg"
-                                src="assets/project-mobile-ai/2. Chart - pain point 1.png" alt="Chart - Pain Point 1" />
-                        </div>
-                        <div class="text-gray-300 text-lg font-normal font-['Inter'] leading-relaxed">
-                            A meaningful segment of users (45%) receives high notification volume. This leads to<br />
-                            <ul class="list-disc list-inside mt-2 text-gray-400">
-                                <li>Important updates getting buried.</li>
-                                <li>Users missing critical tasks or deadlines.</li>
-                                <li>Increasing stress and cognitive load.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pain Point 2 -->
-                <div class="flex flex-col gap-6">
-                    <h3 class="text-white text-xl font-medium font-['Inter'] leading-relaxed">Pain point 2: Difficulty
-                        in Prioritizing Actions</h3>
-                    <div class="flex flex-col gap-4">
-                        <div
-                            class="p-5 bg-white/5 border border-white/10 rounded-2xl flex flex-col items-center justify-center gap-2">
-                            <video src="assets/project-mobile-ai/3. Inbox scrolling - pain point 2.mp4" autoplay loop
-                                muted playsinline class="w-[240px] h-[448px] object-cover rounded-lg"></video>
-                        </div>
-                        <div class="text-gray-300 text-lg font-normal font-['Inter'] leading-relaxed">
-                            Notifications are often presented in a flat, chronological list, making it hard to:<br />
-                            <ul class="list-disc list-inside mt-2 text-gray-400">
-                                <li>Distinguish urgent from non-urgent items.</li>
-                                <li>Identify which tasks require immediate attention versus those that can wait.</li>
-                                <li>Spot high-impact work among routine updates.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- PROCESS SECTION -->
-        <div class="w-full flex flex-col items-center py-20 gap-6">
-            <div class="w-full max-w-[840px] px-6 flex flex-col gap-6">
-
-                <h2 class="text-white text-[22px] font-medium font-['Inter'] leading-snug">The Process</h2>
-
-                <div class="flex flex-col gap-14">
-                    <!-- Prompt Engineering -->
-                    <div class="flex flex-col gap-6">
-                        <div class="flex flex-col gap-2">
-                            <h3 class="text-white text-xl font-medium font-['Inter'] leading-relaxed">Prompt Engineering
-                            </h3>
-                            <p class="text-gray-300 text-lg font-normal font-['Inter'] leading-relaxed">
-                                Before we moved onto design, the first step was to figure out if and how the
-                                notification prioritisation would work. Initially, I created a custom GPT which I used
-                                to test out the prompt with a sample dataset.<br /><br />
-                                Later, the prompt evolved through multiple iterations and testing; tweaking the input
-                                rules, data, context as well as the output structure and quality. Collaborating with the
-                                PMs, BEs & QAs to define the expected output, data to be used, etc. were some of the
-                                most exciting experiences of this project.
-                            </p>
-                        </div>
-                        <iframe src="https://prompt-tuner-theta.vercel.app/"
-                            class="w-full max-w-[640px] h-[920px] bg-white/5 border border-white/10 rounded-2xl mx-auto block"></iframe>
-                    </div>
-
-                    <!-- Learnings -->
-                    <div class="flex flex-col gap-2">
-                        <h3 class="text-white text-xl font-medium font-['Inter'] leading-relaxed">Learnings</h3>
-                        <div class="text-gray-300 text-lg font-normal font-['Inter'] leading-relaxed">
-                            <!-- Changed query: numbered list, regular style -->
-                            <ol class="list-decimal list-inside space-y-2 mt-2">
-                                <li>Build iteratively while testing with realistic data from the start.</li>
-                                <li>Clearly define the input, output structures along with relevant context for the best
-                                    output.</li>
-                                <li>Provide specific scenario handling rules and examples to handle a variety of use
-                                    cases.</li>
-                                <li>Goes without saying but easy to miss: ensure the prompt doesn’t have conflicting or
-                                    open to interpretation kinda rules to avoid a bad output.</li>
-                                <li>Ask the AI to use specific input json objects in the output to avoid hallucinations.
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- DESIGNS SECTION (Full width background) -->
-        <div class="w-full flex flex-col items-center py-20 gap-6 bg-white/[0.02]">
-            <div class="w-full max-w-[840px] px-6 flex flex-col gap-6">
-
-                <h2 class="text-white text-[22px] font-medium font-['Inter'] leading-snug">Designs</h2>
-
-                <!-- Notification Card Improvements -->
-                <div class="flex flex-col gap-14">
-                    <div class="flex flex-col gap-6">
-                        <h3 class="text-white text-xl font-medium font-['Inter'] leading-relaxed">Notification card
-                            improvements</h3>
-
-                        <!-- Row 1 -->
-                        <div class="flex gap-6">
-                            <div class="flex-1 flex flex-col gap-3">
-                                <div
-                                    class="w-full aspect-[4/3] bg-white/5 border border-white/10 rounded-lg overflow-hidden">
-                                    <img src="assets/project-mobile-ai/NF 1.png" class="w-full h-full object-cover"
-                                        alt="NF 1">
-                                </div>
-                                <div class="flex flex-col gap-1">
-                                    <div class="text-white/70 text-sm font-medium font-['Inter'] leading-relaxed">❌
-                                        Notification summary + quick action</div>
-                                    <div class="text-gray-500 text-sm font-normal font-['Inter'] leading-snug">Upfront
-                                        summaries helped only a small portion of the users, and given the small real
-                                        estate on mobile, this option wasn’t feasible.</div>
-                                </div>
-                            </div>
-                            <div class="flex-1 flex flex-col gap-3">
-                                <div
-                                    class="w-full aspect-[4/3] bg-white/5 border border-white/10 rounded-lg overflow-hidden">
-                                    <img src="assets/project-mobile-ai/NF 2.png" class="w-full h-full object-cover"
-                                        alt="NF 2">
-                                </div>
-                                <div class="flex flex-col gap-1">
-                                    <div class="text-white/70 text-sm font-medium font-['Inter'] leading-relaxed">❌
-                                        Notification summary + chips</div>
-                                    <div class="text-gray-500 text-sm font-normal font-['Inter'] leading-snug">With
-                                        testing, the chips proved to add value and help ground the users in reality, but
-                                        the summaries still weren’t as useful to be shown upfront.</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Row 2 -->
-                        <div class="flex gap-6">
-                            <div class="flex-1 flex flex-col gap-3">
-                                <div
-                                    class="w-full aspect-[4/3] bg-white/5 border border-white/10 rounded-lg overflow-hidden">
-                                    <img src="assets/project-mobile-ai/NF 3.png" class="w-full h-full object-cover"
-                                        alt="NF 3">
-                                </div>
-                                <div class="flex flex-col gap-1">
-                                    <div class="text-white/70 text-sm font-medium font-['Inter'] leading-relaxed">🟡
-                                        Current notification card</div>
-                                    <div class="text-gray-500 text-sm font-normal font-['Inter'] leading-snug">Contains
-                                        bare minimum information, difficult to filter & prioritise visually (Unchanged
-                                        in V1 due to tech constraints).</div>
-                                </div>
-                            </div>
-                            <div class="flex-1 flex flex-col gap-3">
-                                <div
-                                    class="w-full aspect-[4/3] bg-white/5 border border-white/10 rounded-lg overflow-hidden">
-                                    <img src="assets/project-mobile-ai/NF 4.png" class="w-full h-full object-cover"
-                                        alt="NF 4">
-                                </div>
-                                <div class="flex flex-col gap-1">
-                                    <div class="text-white/70 text-sm font-medium font-['Inter'] leading-relaxed">✅
-                                        Notification card + chips (*prioritised for next release)</div>
-                                    <div class="text-gray-500 text-sm font-normal font-['Inter'] leading-snug">This
-                                        option essentially bought in the key information and helped users quickly scan &
-                                        prioritize their notifications.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Mode of Prioritization -->
-                    <div class="flex flex-col gap-6">
-                        <h3 class="text-white text-xl font-medium font-['Inter'] leading-relaxed">Solving for mode of
-                            prioritization</h3>
-                        <!-- Row 1 -->
-                        <div class="flex gap-6">
-                            <div class="flex-1 flex flex-col gap-3">
-                                <div
-                                    class="w-full aspect-[4/3] bg-white/5 border border-white/10 rounded-lg overflow-hidden">
-                                    <img src="assets/project-mobile-ai/MP 1.png" class="w-full h-full object-cover"
-                                        alt="MP 1">
-                                </div>
-                                <div class="flex flex-col gap-1">
-                                    <div class="text-white/70 text-sm font-medium font-['Inter'] leading-relaxed">❌
-                                        Summarise new inbox notifications</div>
-                                    <div class="text-gray-500 text-sm font-normal font-['Inter'] leading-snug">This
-                                        summary is not actionable, users still have to find the notification and process
-                                        them again.</div>
-                                </div>
-                            </div>
-                            <div class="flex-1 flex flex-col gap-3">
-                                <div
-                                    class="w-full aspect-[4/3] bg-white/5 border border-white/10 rounded-lg overflow-hidden">
-                                    <img src="assets/project-mobile-ai/MP 2.png" class="w-full h-full object-cover"
-                                        alt="MP 2">
-                                </div>
-                                <div class="flex flex-col gap-1">
-                                    <div class="text-white/70 text-sm font-medium font-['Inter'] leading-relaxed">❌
-                                        Focus
-                                        mode</div>
-                                    <div class="text-gray-500 text-sm font-normal font-['Inter'] leading-snug">While
-                                        this option reduces clutter and brings in actionability, users don’t get a
-                                        single view of all their priorities...</div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Row 2 -->
-                        <div class="flex gap-6">
-                            <div class="flex-1 flex flex-col gap-3">
-                                <div
-                                    class="w-full aspect-[4/3] bg-white/5 border border-white/10 rounded-lg overflow-hidden">
-                                    <img src="assets/project-mobile-ai/MP 3.png" class="w-full h-full object-cover"
-                                        alt="MP 3">
-                                </div>
-                                <div class="flex flex-col gap-1">
-                                    <div class="text-white/70 text-sm font-medium font-['Inter'] leading-relaxed">🔸
-                                        Categorising based on the urgency</div>
-                                    <div class="text-gray-500 text-sm font-normal font-['Inter'] leading-snug">This
-                                        option provides users with a single scannable list of notifications categorised
-                                        based on the context</div>
-                                </div>
-                            </div>
-                            <div class="flex-1 flex flex-col gap-3">
-                                <div
-                                    class="w-full aspect-[4/3] bg-white/5 border border-white/10 rounded-lg overflow-hidden">
-                                    <img src="assets/project-mobile-ai/MP 4.png" class="w-full h-full object-cover"
-                                        alt="MP 4">
-                                </div>
-                                <div class="flex flex-col gap-1">
-                                    <div class="text-white/70 text-sm font-medium font-['Inter'] leading-relaxed">🔸
-                                        Priority tabs</div>
-                                    <div class="text-gray-500 text-sm font-normal font-['Inter'] leading-snug">Each tab
-                                        allows users to view and take action on the notifications under it.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
 
         <!-- SOLUTION & WHAT'S NEXT -->
-        <div class="w-full flex flex-col items-center py-20 gap-14">
-            <div class="w-full max-w-[840px] px-6 flex flex-col gap-14">
+        <div class="w-full flex items-center py-20 bg-[#101010]">
+            <div class="w-full max-w-[840px] px-6 mx-auto flex flex-col gap-14">
 
                 <div class="flex flex-col gap-6">
                     <div class="flex flex-col gap-2">
-                        <h2 class="text-white text-[22px] font-medium font-['Inter'] leading-snug">Solution</h2>
-                        <p class="text-gray-300 text-lg font-normal font-['Inter'] leading-relaxed">The priority inbox
-                            provides users with a simple categorised list of notifications which helps shift the focus
-                            from overwhelm to quick action.</p>
+                        <h2 class="text-white text-[22px] font-medium font-['Inter'] leading-snug">Solution details</h2>
+                        <div class="text-gray-300 text-lg font-normal font-['Inter'] leading-relaxed">
+                            <p class="mb-6">The priority inbox provides users with a simple categorised list of
+                                notifications which helps shift the focus from overwhelm to quick action.</p>
+                            <p class="mb-4">When the user opens the app, they would see notifications in 3 buckets.</p>
+                            <div class="flex flex-col gap-6">
+                                <div>
+                                    1. Urgent<br>
+                                    <span class="pl-5 block">Highlights time critical items that’s dependent on the
+                                        user.</span>
+                                </div>
+                                <div>
+                                    2. Important<br>
+                                    <span class="pl-5 block">Highlights notifications which need the users input but
+                                        aren’t time critical.</span>
+                                </div>
+                                <div>
+                                    3. Other<br>
+                                    <span class="pl-5 block">All other notifications which the user can view later are
+                                        housed in this bucket.</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-5 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center">
-                        <img class="w-full h-auto rounded-lg" src="assets/project-mobile-ai/4. Solution.png"
-                            alt="Solution" />
+                        <img class="h-[600px] w-auto object-contain rounded-lg"
+                            src="assets/project-mobile-ai/4. Solution.png" alt="Solution" />
                     </div>
                 </div>
 
@@ -443,7 +203,7 @@
                     </div>
                     <div class="p-5 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center">
                         <video src="assets/project-mobile-ai/5. Anchors.mp4" autoplay loop muted playsinline
-                            class="w-[240px] h-[448px] object-cover rounded-lg"></video>
+                            class="h-[600px] w-auto object-cover rounded-lg"></video>
                     </div>
                 </div>
 
@@ -457,7 +217,7 @@
                     </div>
                     <div class="p-5 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center">
                         <video src="assets/project-mobile-ai/6. Swipe.mp4" autoplay loop muted playsinline
-                            class="w-[240px] h-[448px] object-cover rounded-lg"></video>
+                            class="h-[600px] w-auto object-cover rounded-lg"></video>
                     </div>
                 </div>
 
@@ -470,8 +230,8 @@
                             between the priority and newest sorting modes</p>
                     </div>
                     <div class="p-5 bg-white/5 border border-white/10 rounded-2xl flex items-center justify-center">
-                        <img class="w-full h-auto rounded-lg" src="assets/project-mobile-ai/7. Onboarding.png"
-                            alt="Onboarding" />
+                        <img class="h-[600px] w-auto object-contain rounded-lg"
+                            src="assets/project-mobile-ai/7. Onboarding.png" alt="Onboarding" />
                     </div>
                 </div>
 
@@ -479,7 +239,7 @@
         </div>
 
         <!-- WHAT'S NEXT -->
-        <div class="w-full flex flex-col items-center pb-20 gap-6">
+        <div class="w-full flex flex-col items-center pb-20 pt-20 gap-6">
             <div class="w-full max-w-[840px] px-6 flex flex-col gap-6">
                 <h2 class="text-white text-[22px] font-medium font-['Inter'] leading-snug">What’s Next?</h2>
                 <div class="flex flex-col gap-14">
